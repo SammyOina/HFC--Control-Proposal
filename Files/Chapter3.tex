@@ -1,2 +1,19 @@
-\section{Methodology\ldots}
-This is 
+\section{Methodology}
+\subsection{System Modelling}
+\paragraph{}The fuel cell system model will be obtained from governing equations from which a transfer function will be generated from the linearized model. The transfer function will be used to generate a state space model for the system. 
+\paragraph{}The system will then be represented in matlab and the controllers designed will be tested on the system to observe the effectiveness of each control method. 
+\subsection{Simulations}
+\paragraph{}From the generated models on matlab, simulations will be performed using the different controllers and the responses and other metrics will be plotted out for further analysis. Metrics such as rise time, settling time and stochastic response will be observed to determine the system performance.
+\subsection{Sensors}
+\paragraph{}Sensors will be used to collect data from the system as it runs. These include:
+\begin{itemize}
+\item Humidity sensor
+\item Temperature sensor
+\item Flow rate sensor
+\item Pressure sensors
+\item Voltage sensor
+\item Current sensor
+\end{itemize}
+\paragraph{}These sensors will be used by the controller to observe system performance and optimize for each parameter as well as the performance requirements.
+\subsection{Data Analysis}
+\paragraph{}The data collected from the simulations and sensors will be analysed using custom software created using jupyter notebooks. Graphs will  be generated to compare the performance of each controller and evaluation of the selected controller.
