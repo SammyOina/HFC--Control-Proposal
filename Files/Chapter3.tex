@@ -2,13 +2,12 @@
 \subsection{System Modelling}
 \paragraph{}The fuel cell system model will be obtained from governing equations from which a transfer function will be generated from the linearized model. The transfer function will be used to generate a state space model for the system. 
 \paragraph{}The system will then be represented in matlab and the controllers designed will be tested on the system to observe the effectiveness of each control method. 
-\paragraph{}There are two types of models which have been proposed to investigate fuel cell technology via simulation.
-The approaches are detailed lumped parameter dynamic models;and black-box models based on system identification. The latter commonly expresses as NARX (Nonlinear Auto Regressive with eXogenous input) or ARMAX (Auto Regressive Moving Average with eXogenous input) equations. This work addresses both modelling approaches by presenting an ARMAX model for the black-box modelling approach and a detailed mechanistic model for the dynamic modelling approach.
+\paragraph{} Two genral types of models are used in simulation of fuel cell technology, the approaches are detailed lumped parameter dynamic models and black-box models based on system identification. The black box model commonly expresses as NARX (Nonlinear Auto Regressive with eXogenous input) or ARMAX (Auto Regressive Moving Average with eXogenous input) equations. This project addresses both modelling approaches by presenting an ARMAX model for the black-box modelling approach and a detailed mechanistic model for the dynamic modelling approach.
 \subsubsection{ARMAX Model}
-\paragraph{}From a system viewpoint, hydrogen is an input variable and is fed at an adjustable flow rate NH . Oxygen is also an input and can be represented by NA where a fuel cell uses the oxygen content of air. Voltage and current are then considered the system outputs. Franklin et al \cite{franklin_feedback_2002}, represent this as Multiple Input Multiple Output (MIMO) System as shown in the Figure 3.4 below.
+\paragraph{}Hydrogen is an input variable and is fed at an adjustable flow rate N\textsubscript{H} as well as oxygen expressed as n\textsubscript{A} derived from air. Voltage and current are the system outputs. Franklin et al \cite{franklin_feedback_2002}, represent this as Multiple Input Multiple Output (MIMO) System as shown in the Figure 3.4 below.
 \begin{figure}[!h]
 \includegraphics{Figures/mimo}
-\caption{MIMO representation of fuel cell \cite{thanapalan_model_2011}}
+\caption{ MIMO representation of fuel cell \cite{thanapalan_model_2011}}
 \end{figure}
 \paragraph{}The relationship between the inputs (N\textsubscript{A} and N\textsubscript{H}) and the outputs (I\textsubscript{c} and V\textsubscript{c}), while R represents the internal resistance. The system can be represented using the following equations:
 \begin{equation}
