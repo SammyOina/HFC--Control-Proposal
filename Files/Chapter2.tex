@@ -1,12 +1,12 @@
 \section{Literature Review}
 \subsection{Fuel Cell Operation, Subsystems and Parameters}
-\paragraph{}In a (Proton Electron Membrane)PEM fuel cell stack, chemical energy from the reaction between hydrogen and oxygen is converted directly into electric energy. Water and heat are produced as by-products.
+\paragraph{}In a (Proton Electron Membrane)PEM fuel cell stack, chemical energy from the reaction between hydrogen and oxygen is converted directly into electric energy. Water and heat are produced as by-products \cite{thanapalan_model_2011}.
 \begin{figure}[!h]
 \includegraphics{Figures/Figure5}
 \caption{Fuel cell component description
 \cite{stefanopoulou_mechatronics_nodate}}
 \end{figure} 
-\paragraph{}In the figure above, hydrogen travels through inlet manifolds to the flow fields. From the flow fields, gas diffuses through porous media to the membrane. The membrane, which is sandwiched in the middle of the cell, contains catalyst and microporous diffusion layers along with gaskets as a single integrated unit. One side of the membrane is  the anode and the other is the cathode. The anode and cathode are more generally referred to as electrodes. The catalyst layer at the anode separates hydrogen molecules into protons and electrons.
+\paragraph{}In a hydrogen fuel cell, hydrogen (which we will also refer to as fuel) travels through inlet manifolds to the flow fields. From the flow fields, gas diffuses through porous media to the membrane. The membrane, which is sandwiched in the middle of the cell, contains catalyst and microporous diffusion layers along with gaskets as a single integrated unit. One side of the membrane is  the anode and the other is the cathode. The anode and cathode are more generally referred to as electrodes. The catalyst layer at the anode separates hydrogen molecules into protons and electrons \cite{stefanopoulou_mechatronics_nodate}.
 \begin{equation}
 $$2H_{2} \rightarrow 4H^{+}+4e^{-}$$
 \end{equation}
@@ -24,7 +24,7 @@ $$2H_{2}+ O_{2} \rightarrow 2H_{2}O+Heat.$$
 \caption{Fuel cell component description
 \cite{stefanopoulou_mechatronics_nodate}}
 \end{figure}
-\paragraph{}Stack temperature and membrane water content affect the fuel cell voltage. The difference between the actual voltage and the ideal voltage represents the loss in the cell which turns into heat. (The ideal standard voltage for a fuel cell in which H2 and O2 react is 1.18 V when the resulting water product is in gaseous form.)
+\paragraph{}Stack temperature and membrane water content affect the fuel cell voltage \cite{ehsani_modern_2018}. The difference between the actual voltage and the ideal voltage represents the loss in the cell which turns into heat. (The ideal standard voltage for a fuel cell in which H2 and O2 react is 1.18 V when the resulting water product is in gaseous form.)
 \paragraph{}As more current is drawn from the fuel cell, the voltage decreases, due to fuel cell electrical resistance, low reaction rate and, inefficient reactant gas transport,. Lower voltage indicates lower efficiency of the fuel cell, therefore low load (low current) operation is preferred. Operation at low load requires a large fuel cell stack and has detrimental consequences to the overall volume, weight, and cost.
 \paragraph{}To avoid over-sizing the FC stack, a series of actuators such as valves, pumps, blowers, expander vanes, fan motors, humidifiers and condensers are used to control critical FC parameters for a wide range of current, and thus, power setpoints. The auxiliary actuators are needed to make fine and fast adjustments to satisfy reliability standards, performance and safety that are independent of age and operating conditions of the FC. The resulting multivariate design and control synthesis task, also known as balance of plant (BOP), is complex because of subsystem interactions, conflicting objectives, and lack of sensors.
 \paragraph{}Main Control among the main FC subsystems are:
@@ -65,6 +65,8 @@ single-output (SISO) controller between the compressor motor voltage and the del
 \paragraph{}The cooling water temperature is measured, and controlled by a feedback control algorithm.
 The air supply system comprises an air filter, a compressor and a humidifier. The impurities in air will cause the catalyst to be poisoned. Thus as a preventive measure, the air should be filtered before getting into the stack. The air flow is controlled by the compressor with a feed forward + feedback algorithm. 
 \paragraph{}The air is further humified since there should be some water in the PEM, to allow the PEM to conduct protons. In the humidifier, the dry air is humidified with the damp-heat air out of the stack. The air compressor and the humidifier are controlled by the Air Control Unit (ACU) and the Humidifying System (HS).
-\subsection{Gaps in the Field of Hydrogen Fuel Cell Control}
-
+\subsection{Summary}
+\paragraph{}A fuel cell system integrates many components into a power system. These include DC/DC converters, batteries, and ultracapacitors in the system. In cases where the fuel cell is not fed directly with hydrogen, a reformer must be included. Therefore, there are many control loop schemes, the number of which depends on the configuration of the system. 
+\paragraph{}Many control strategies have been proposed in literature, ranging from feed-forward control,Linear quartertic regulator, Neural Networks and Model Predictive Control. A good number of research papers focus on the low level control of the fuel cell to fulfil at least one of the three main objectives such as maximum efficiency, voltage control and/or starvation prevention. However, these designs are still at the theoretical stage and without real time testing. This leads to a methodological gap in the area of hydrogen fuel cell control. The validity of these control strategies for real fuel cell system applications is, however, still under investigation. 
+\paragraph{}Furthermore, the extensive studies in the controller design methods are evidence that the fuel cell system control is a very active research area. The research in this area is mainly motivated by the recognition that the current control methods cannot fully meet the desired design requirements on fuel cell system performance, stability, and robustness etc. Any controller design which gives a satisfactory performance on fuel cell system behavior is worth consideration for implementation \cite{ehsani_modern_2018}.
 
